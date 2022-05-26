@@ -4,21 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Routes, Route,Link,useRouteMatch } from 'react-router-dom';
-import Home from './component/Home/Home';
-import Login from './component/Account/Login/Login';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App>
-      <Routes>
-        <Route exact path='/' element = {<Home/>} />
-        <Route path='/login' component = {<Login/>} />
-        {/* <Route path='/account' component = {Account} />
-        <Route component = {NotFound} /> */}
-      </Routes>
-      </App>
+    <BrowserRouter>
+     <App/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 serviceWorker.unregister();
