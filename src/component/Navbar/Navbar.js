@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {NavbarItems} from "./NavbarItems";
 import { Button } from "../Button";
 import './Navbar.css';
+import {BiGame} from 'react-icons/bi'
 
 class Navbar extends Component{
     state = {
@@ -15,7 +16,7 @@ class Navbar extends Component{
     render(){
         return(
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">React<i className="fab fa-react"></i></h1>
+                <h1 className="navbar-logo">Tuan<i className="icon"><BiGame/></i></h1>
                 <div className="menu-icon" onClick={this.handleclick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
